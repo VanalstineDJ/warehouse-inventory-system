@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="this page allows someone make changes to products">
+	<title>User Interface</title>
+	<!-- we can also link to style sheets -->
+	<link rel="icon" href="">
+	<link rel="stylesheet" type="text/css" href="data.css">
+	<div id="nav" class="sticky">	
+		<a href="index.html"><button>Home</button></a> <a href="products.html"><button>Products</button></a>
+		<a href="warehouse.html"><button>Warehouses</button></a> 
+		<a href="userInterface.html"><button>Modification</button></a>
+		<hr>
+	</div>
+</head>
+<body>
+	<h1>Product Management</h1>
+	<div class="row">
+		<div class="column">
+			<form>
+				<h3>Add Product</h3>
+				<h5>Product Name:</h5>
+				<input id="nameInput" type="text" name="productName" class="form-control">
+				<h5>Product Price:</h5>
+				<input id="priceInput" type="number" name="productPrice" class="form-control">
+				<h5>Product Quantity:</h5>
+				<input id="quantityInput" type="number" name="produceQuantity" class="form-control">
+				<h5>Product Id:</h5>
+				<input id="idInput" type="number" name="productId" class="form-control">
+				<h5>Warehouse Id:</h5>
+				<input id="warehouseInput" type="number" name="productWarehouse" class="form-control"><br><br>
+				<button id="addProductButton" class="btn btn-primary">Add New Product</button><br>
+				<h5></h5>
+			</form>
+		</div>
+		<div class="column">
+			<form style="background-image: url(openBox.jpg)" style="background-size: contain">
+				<h3>Update Product</h3>
+				<h5>Product Name:</h5>
+				<input id="updateNameInput" type="text" name="UpdateName" class="form-control">
+				<h5>Product Price:</h5>
+				<input id="updatePriceInput" type="number" name="UpdatePrice" class="form-control">
+				<h5>Product Quantity:</h5>
+				<input id="updateQuantityInput" type="number" name="UpdateQuantity" class="form-control">
+				<h5>Product Id:</h5>
+				<input id="updateIdInput" type="number" name="UpdateId" class="form-control">
+				<h5>Warehouse Id:</h5>
+				<input id="updateWarehouseInput" type="number" name="UpdateWarehouse" class="form-control"><br><br>
+				<button id="updateProductButton" class="btn btn-primary">Update Current Product</button><br>
+				<h5></h5>
+			</form>
+		</div>
+		<div class="column">
+			<form>
+				<h3>Delete Product</h3>
+				<h5>Product Name:</h5>
+				<input id="deleteNameInput" type="text" name="deleteName" class="form-control">
+				<h5>Product Price:</h5>
+				<input id="deletePriceInput" type="number" name="deletePrice" class="form-control">
+				<h5>Product Quantity:</h5>
+				<input id="deleteQuantityInput" type="number" name="deleteQuantity" class="form-control">
+				<h5>Product Id:</h5>
+				<input id="deleteIdInput" type="number" name="deleteId" class="form-control">
+				<h5>Warehouse Id:</h5>
+				<input id="deleteWarehouseId" type="number" name="deleteWarehouse" class="form-control"> 
+				<br><br>
+				<button id="deleteProductButton" class="btn btn-primary">Delete Product</button> <br>
+				<h5></h5>			
+			</form>
+		</div>
+	</div>
+	
+	<script src="userInterface.js"></script>
+</body>
+<hr>
+<div class="footer-bottom">
+		<p> Copyright @ 2019 David J. Van Alstine </p>
+</div>
+</html>

@@ -159,18 +159,18 @@ public class AssociateImplementationTest {
 		assertEquals(median, testMedian, precision);
 	}
 
-	@Test
-	public void totalAssetsPerWarehouseTest() {
-		Map<Warehouse, Double> testTotal = testObj.totalAssetsPerWarehouse(productList);
-		try {
-			for (Warehouse entry : warehouseTotals.keySet()) {
-				// all the totals from each warehouse should match
-				assertEquals(warehouseTotals.get(entry), testTotal.get(entry), 0.01);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			fail("An exception was thrown during this test - therefore the test was failed");
-		}
-	}
+//	@Test
+//	public void totalAssetsPerWarehouseTest() {
+//		Map<Warehouse, Double> testTotal = testObj.totalAssetsPerWarehouse(productList);
+//		try {
+//			for (Warehouse entry : warehouseTotals.keySet()) {
+//				// all the totals from each warehouse should match
+//				assertEquals(warehouseTotals.get(entry), testTotal.get(entry), 0.01);
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			fail("An exception was thrown during this test - therefore the test was failed");
+//		}
+//	}
 
 }

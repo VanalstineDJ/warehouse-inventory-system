@@ -1,0 +1,48 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+
+/* div.sticky{ */
+/* 	position: -webkit-sticky; */
+/* 	position: sticky; */
+/*   	top: 0; */
+/*   	padding: 5px; */
+/*   	background-color: white; */
+/*   	border: 2px solid black; */
+/* } */
+
+body{
+	background-image: url("http://tilt-up.org/tilt-uptoday/wp-content/uploads/2016/02/SA_Bayport.jpg");
+	/* background-image: url("https://static1.squarespace.com/static/540df524e4b099a9b57f83a5/59b9c1bcccc5c55ee3204428/59b9c1bda803bb401f2e1d73/1505346992222/Distribution-center-FedEx-Elmsford-NY-March-Associates-Construction-4.jpg?format=1000w"); */
+	/* background-repeat: no-repeat; */
+	background-size: 100%;
+	background-position: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: black;
+	text-align: center;
+	
+}
+
+
+p{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+	border-radius: 10px;
+}
+h1{
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.footer-bottom{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-color: white;
+	text-align: center;
+}
+
+

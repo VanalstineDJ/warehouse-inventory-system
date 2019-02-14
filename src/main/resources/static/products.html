@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="this page allows someone to view all our products">
+    	<title>Products</title>
+    	<script>
+    		window.onload = function(){
+    			getProducts();
+    		}
+    	</script>
+    	<link rel="icon" href="">
+		<link rel="stylesheet" type="text/css" href="data.css">
+    	<div id="nav" class="sticky">
+        	<a href="index.html"><button>Home</button></a>
+            <a href="products.html"><button>Products</button></a>
+            <a href="warehouse.html"><button>Warehouses</button></a>
+			<a href="userInterface.html"><button>Modification</button></a>
+			<hr>
+		</div>  	    	
+	</head>	
+	<body>
+	<br><br>
+<!-- 		<button id = "productsButton">Show Products</button> -->
+		<h1>Product List</h1>
+		<table id="products">
+    		<tr>
+    			<th>Id</th>
+        		<th>Name</th>
+        		<th>Price</th>
+        		<th>Quantity</th>
+        		<th>Warehouse</th>
+    		</tr>
+		</table>
+		<br> <br>
+	<section id="popups">
+		<div class="popup" onclick="getAnalysis(minURL, printMin)">
+			Lowest Price <span class="popuptext" id="minPopup"></span>
+		</div>
+		<br>
+		<div class="popup" onclick="getAnalysis(maxURL, printMax)">
+			Highest Price <span class="popuptext" id="maxPopup"></span>
+		</div>
+		<br>
+		<div class="popup" onclick="getAnalysis(sumURL, printSum)">
+			Total Price <span class="popuptext" id="sumPopup"></span>
+		</div>
+		<br>
+		<div class="popup" onclick="getAnalysis(avgURL, printAvg)">
+			Average Price <span class="popuptext" id="avgPopup"></span>
+		</div>
+		<br>
+		<div class="popup" onclick="getAnalysis(medURL, printMed)">
+			Median Price <span class="popuptext" id="medianPopup"></span>
+		</div>
+	</section>
+</body>
+<hr>
+	<div class="footer-bottom">
+		<p> Copyright @ 2019 David J. Van Alstine </p>
+	</div>
+	<script src="products.js"></script>
+</html>

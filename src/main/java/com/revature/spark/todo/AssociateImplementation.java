@@ -1,5 +1,6 @@
 package com.revature.spark.todo;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -10,7 +11,7 @@ import com.revature.spark.beans.Warehouse;
  * Within this class, you will implement the logic to calculate data for various
  * reports.
  * 
- * @author Your Name Here
+ * @author David Van Alstine
  * 
  */
 public class AssociateImplementation {
@@ -23,7 +24,15 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double sum(List<Product> products) {
-		return null;
+		double newSum = 0;
+//		for(int i = 0; i < listSize; i++) {
+//			newSum = newSum + products.get(i);
+//		}			
+		for(Product i : products) {
+			double totalVal = i.getPrice() * i.getQuantity();
+			newSum += totalVal;
+		}		
+		return newSum;	
 	}
 
 	/**
@@ -33,7 +42,14 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double min(List<Product> products) {
-		return null;
+		double lowestPrice = 100;
+		for(Product i : products) {
+			double currentPrice = i.getPrice();
+			if(currentPrice < lowestPrice) {
+				lowestPrice = currentPrice;
+			}	
+		}
+		return lowestPrice;
 	}
 
 	/**
@@ -43,7 +59,14 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double max(List<Product> products) {
-		return null;
+		double highestPrice = 0;
+		for(Product i : products) {
+			double currentPrice = i.getPrice();
+			if(currentPrice > highestPrice) {
+				highestPrice = currentPrice;
+			}	
+		}
+		return highestPrice;
 	}
 
 	/**
@@ -53,7 +76,11 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double avg(List<Product> products) {
-		return null;
+		double sum = 0;
+		for(Product i : products) {
+			sum = sum + i.getPrice();
+		}
+		return (sum/products.size());
 	}
 
 	/**
@@ -63,7 +90,35 @@ public class AssociateImplementation {
 	 * @return
 	 */
 	public Double median(List<Product> products) {
-		return null;
+		
+		double[] sortedArr = new double[products.size()];
+        int index = 0;
+        for(Product i : products) {
+            sortedArr[index] = i.getPrice();
+            index++;
+        }
+        int size = products.size();
+        for(int i = 0; i < size - 1; i++) {
+            for(int j = 0; j < size - i - 1; j++) {
+                if(sortedArr[j] > sortedArr[j+1]) {
+                    double temp = sortedArr[j];
+                    sortedArr[j] = sortedArr[j+1];
+                    sortedArr[j+1] = temp;
+                }
+            }
+        }
+		
+        int middleVal = sortedArr.length/2;
+		double medianPrice = 0.0;
+		if(sortedArr.length % 2 == 1) {		
+			medianPrice = sortedArr[middleVal];
+		}
+		else if(sortedArr.length % 2 == 0) {
+			double avgMedian = ((sortedArr[middleVal] + sortedArr[middleVal - 1])/2);
+			medianPrice = avgMedian;
+		}
+				
+		return medianPrice;
 	}
 
 	/**
